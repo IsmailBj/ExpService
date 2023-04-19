@@ -1,1 +1,15 @@
 @import url('./style/colors.css');
+
+
+
+.image-electric-engineer {
+    background: url('./img/elec-wall.jpg');
+}
+
+.image-it-engineer {
+    background: url('./img/it-wall.jpg');
+}
+
+.image-plumber{
+    background: url('./img/plumb-wall.jpg');
+}
