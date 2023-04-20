@@ -1,0 +1,18 @@
+@import url('./colors.css');
+
+.center-view{
+    background-color: black;
+    height: calc(100vh - 40px);
+    padding: 20px 60px;
+}
+
+.center-view .header {
+    height: 30px;
+    background-color: aquamarine;
+}
+
+
+.center-view .center-view-banner{
+    background-color: rgb(187, 187, 187);
+    height: 400px;
+}

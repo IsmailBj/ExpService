@@ -3,13 +3,13 @@
 
 
 .image-electric-engineer {
-    background: url('./img/elec-wall.jpg');
+    background: url('./img/elec-wall.png');
 }
 
 .image-it-engineer {
-    background: url('./img/it-wall.jpg');
+    background: url('./img/it-wall.png');
 }
 
 .image-plumber{
-    background: url('./img/plumb-wall.jpg');
+    background: url('./img/plumber-wall.png');
 }

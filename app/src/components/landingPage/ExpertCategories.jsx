@@ -1,15 +1,16 @@
 import React, {useState} from "react";
-import IT from "../img/icons/computer.svg"
-import EL from "../img/icons/electric.svg"
-import PL from "../img/icons/plumber.svg"
-import LOGO from "../img/logo.svg"
-import "../style/ExpertCategories.css"
-import {ChangeBackgroundImg} from '../helper/changebackgroundImg'
+import IT from "../../img/icons/computer.svg"
+import EL from "../../img/icons/electric.svg"
+import PL from "../../img/icons/plumber.svg"
+import LOGO from "../../img/logo.svg"
+import "../../style/ExpertCategories.css"
+import {ChangeBackgroundImg} from '../../helper/changebackgroundImg'
+import { changeView } from "../../helper/changeView";
 
 
 const ExpertCategories = props =>{
     const [bgImg, setITimg] = useState("test")
-
+    const {setView, view } = props
 
     return (
         <div className="expert_section_container" >
@@ -20,7 +21,7 @@ const ExpertCategories = props =>{
                 <span className="text_area">HIRE YOUR EXPERT</span>
                 <span className="text_area_small">What are you looking for ?</span>
                 <div className="categorie_box">
-                <div className={'card it '} onMouseEnter={()=>ChangeBackgroundImg(setITimg,"image-it-engineer")} onMouseLeave={()=>ChangeBackgroundImg(setITimg,"")}>
+                <div className="card it" onClick={()=>changeView(setView,"it")} onMouseEnter={()=>ChangeBackgroundImg(setITimg,"image-it-engineer")} onMouseLeave={()=>ChangeBackgroundImg(setITimg,"")}>
                     <div className="icon">
                         <img src={IT} alt="err" />
                     </div>
@@ -28,7 +29,7 @@ const ExpertCategories = props =>{
                         Information Technology
                     </div>
                 </div>
-                <div className="card elec" onMouseEnter={()=>ChangeBackgroundImg(setITimg,"image-electric-engineer")} onMouseLeave={()=>ChangeBackgroundImg(setITimg,"")}>
+                <div className="card elec" onClick={()=>changeView(setView,"elec")} onMouseEnter={()=>ChangeBackgroundImg(setITimg,"image-electric-engineer")} onMouseLeave={()=>ChangeBackgroundImg(setITimg,"")}>
                     <div className="icon">
                         <img src={EL} alt="err" />
                     </div>
@@ -36,7 +37,7 @@ const ExpertCategories = props =>{
                         Electrician Engineer
                     </div>
                 </div>
-                <div className="card plumb" onMouseEnter={()=>ChangeBackgroundImg(setITimg,"image-plumber")} onMouseLeave={()=>ChangeBackgroundImg(setITimg,"")}>
+                <div className="card plumb" onClick={()=>changeView(setView,"plumb")} onMouseEnter={()=>ChangeBackgroundImg(setITimg,"image-plumber")} onMouseLeave={()=>ChangeBackgroundImg(setITimg,"")}>
                     <div className="icon">
                         <img src={PL} alt="err" />
                     </div>
